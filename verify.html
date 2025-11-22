@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação de email</title>
+    <link rel="stylesheet" href="public/style/site.css">
+</head>
+<body>
+    <section class="section-top-main"> 
+        <header>
+            <nav class="navbar">
+                <div class="container-logo">
+                    <a href="/">
+                        GlammiS
+                    </a>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+        <section class="container-auth">
+            <form action="" class="form" id="formAuth">
+                <div class="header-form">
+                    <h2>Verifique seu email</h2>
+                    <p></p><!--deve ser preenchido dinamicamente via JS-->
+                </div>
+                <div class="container-input">
+                    <input type="text" class="inputform" placeholder="Código" autofocus name="code" id="code" inputmode="numeric" step="1" maxlength="6">
+
+                    <script>
+                        document.getElementById("code").addEventListener("input", function () {
+                            this.value = this.value.replace(/\D/g, ""); // remove tudo que NÃO é número
+                        });
+                    </script>
+                </div>
+
+                <div class="container-verify">
+                    <span>5:00</span><!--deve ser adicionado dinamicamente-->
+                    <p>não recebeu o código? <button class="active-resend inative-resend">REENVIAR</button></p><!--deve se usar active-resend quando o código expirar-->
+                </div>
+
+                <div class="container-btnForm">
+                    <button type="button" id="btnRegister">Confirmar</button>
+                </div>
+            </form>
+        </section>
+    </section>
+
+    <script src="/public/script/auth.js"></script>
+</body>
+</html>
