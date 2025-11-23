@@ -28,10 +28,10 @@
             <form action="" class="form" id="formAuth">
                 <div class="header-form">
                     <h2>Verifique seu email</h2>
-                    <p></p><!--deve ser preenchido dinamicamente via JS-->
+                    <p id="emailSpan"></p><!--deve ser preenchido dinamicamente via JS-->
                 </div>
                 <div class="container-input">
-                    <input type="text" class="inputform" placeholder="Código" autofocus name="code" id="code" inputmode="numeric" step="1" maxlength="6">
+                    <input type="text" class="inputform" placeholder="Código" autofocus name="code" id="codeInput" inputmode="numeric" step="1" maxlength="6">
 
                     <script>
                         document.getElementById("code").addEventListener("input", function () {
@@ -41,17 +41,17 @@
                 </div>
 
                 <div class="container-verify">
-                    <span>5:00</span><!--deve ser adicionado dinamicamente-->
-                    <p>não recebeu o código? <button class="active-resend inative-resend">REENVIAR</button></p><!--deve se usar active-resend quando o código expirar-->
+                    <p><span id="timer"></span>s</p><!--deve ser adicionado dinamicamente-->
+                    <p>não recebeu o código? <button class="active-resend inative-resend" id="btnResend">REENVIAR</button></p><!--deve se usar active-resend quando o código expirar-->
                 </div>
 
                 <div class="container-btnForm">
-                    <button type="button" id="btnRegister">Confirmar</button>
+                    <button type="button" id="btnVerify">Confirmar</button>
                 </div>
             </form>
         </section>
     </section>
 
-    <script src="/public/script/auth.js"></script>
+    <script src="/public/script/verify.js"></script>
 </body>
 </html>
