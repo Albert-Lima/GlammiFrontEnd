@@ -25,7 +25,7 @@ btnVerify.addEventListener("click", async ()=>{
 })
 
 //cronômetro de 30s para pedir reenvio de código
-let seconds = 30
+let seconds = 5
 const timerEl = document.querySelector("#timer")
 const resendBtn = document.querySelector("#btnResend")
 
@@ -52,7 +52,10 @@ resendBtn.addEventListener("click", async ()=>{
     if(data.redirect){
         window.location.href = data.redirect
     }
-
-    alert(data.message)
+    if( res.ok) {
+        alert(data.message)
+    } else {
+        alert(data.message)
+    }
     resendBtn.classList.replace( "active-resend", "inative-resend")
 })

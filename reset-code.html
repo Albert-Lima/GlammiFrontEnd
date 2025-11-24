@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmação de email</title>
-    <link rel="stylesheet" href="public/style/site.css">
+    <title>Redefinir senha</title>
+    <link rel="stylesheet" href="/public/style/site.css">
 </head>
 <body>
     <section class="section-top-main"> 
@@ -27,32 +27,29 @@
         <section class="container-auth">
             <form action="" class="form" id="formAuth">
                 <div class="header-form">
-                    <h2>Verifique seu email</h2>
-                    <p>enviamos um código para</p>
-                    <p id="emailSpan"></p><!--deve ser preenchido dinamicamente via JS-->
+                    <h2>Informe o código</h2>
                 </div>
                 <div class="container-input">
-                    <input type="text" class="inputform" placeholder="Código" autofocus name="code" id="codeInput" inputmode="numeric" step="1" maxlength="6">
+                    <input type="text" class="inputform" placeholder="Código" autofocus name="email" id="codeResetInput" inputmode="numeric" step="1" maxlength="6">
 
                     <script>
-                        document.getElementById("code").addEventListener("input", function () {
+                        document.getElementById("codeResetInput").addEventListener("input", function () {
                             this.value = this.value.replace(/\D/g, ""); // remove tudo que NÃO é número
                         });
                     </script>
                 </div>
 
                 <div class="container-verify">
-                    <p><span id="timer"></span>s</p><!--deve ser adicionado dinamicamente-->
-                    <p>não recebeu o código? <button class="active-resend inative-resend" id="btnResend" type="button">REENVIAR</button></p><!--deve se usar active-resend quando o código expirar-->
+                    <p>enviamos um código no seu email</p>
                 </div>
 
                 <div class="container-btnForm">
-                    <button type="button" id="btnVerify">Confirmar</button>
+                    <button type="button" id="sendResetCode">Enviar</button>
                 </div>
             </form>
         </section>
     </section>
 
-    <script src="/public/script/verify.js"></script>
+    <script src="/public/script/reset-code.js"></script>
 </body>
 </html>
