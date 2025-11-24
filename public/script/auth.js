@@ -51,7 +51,7 @@ btnRegister.addEventListener("click", async()=>{
     console.log(payload)
 
     try {
-        const response = await fetch("https://glammis.onrender.com/auth/register", {
+        const response = await fetch("http://localhost:8081/auth/register", {
             method: "POST",
             headers: {
                 "Content-Type":"application/json"
@@ -63,7 +63,7 @@ btnRegister.addEventListener("click", async()=>{
 
         if(response.ok) {
             alert("Conta criada com sucesso!")
-            window.location.href = "/verify.html"
+            window.location.href = data.redirect
         } else{
             alert(data.error || "Erro ao criar conta.")
         }

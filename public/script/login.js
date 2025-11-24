@@ -32,7 +32,7 @@ btnLogin.addEventListener("click", async () => {
     };
 
     try {
-        const response = await fetch("https://glammis.onrender.com/auth/login", {
+        const response = await fetch("http://localhost:8081/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -42,14 +42,18 @@ btnLogin.addEventListener("click", async () => {
 
         const data = await response.json();
 
+        if(data.redirect) {
+            // redirecionar
+            window.location.href = data.redirect;
+        }
+
         if (response.ok) {
             alert("Login realizado com sucesso!");
 
             // opcional: salvar o usuário no localStorage
             localStorage.setItem("user", JSON.stringify(data.user));
 
-            // redirecionar
-            window.location.href = "/dashboard.html";
+            window.location.href = "/dashboard.html"
         } else {
             alert(data.message || "Erro ao fazer login.");
         }

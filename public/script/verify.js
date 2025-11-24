@@ -8,7 +8,7 @@ const btnVerify = document.querySelector("#btnVerify")
 btnVerify.addEventListener("click", async ()=>{
     const code = document.querySelector("#codeInput").value
 
-    const res = await fetch("https://glammis.onrender.com/auth/verify", {
+    const res = await fetch("http://localhost:8081/auth/verify-email", {
         method: "POST",
         headers: { "Content-Type": "application/json"},
         body: JSON.stringify({ email, code})
@@ -41,13 +41,18 @@ const interval = setInterval(()=>{
 
 //Reenviar código
 resendBtn.addEventListener("click", async ()=>{
-    const res = await fetch("https://glammis.onrender.com/auth/resend-code", {
+    const res = await fetch("http://localhost:8081/auth/resend-code", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({email})
     })
 
     const data = await res.json()
+
+    if(data.redirect){
+        window.location.href = data.redirect
+    }
+
     alert(data.message)
     resendBtn.classList.replace( "active-resend", "inative-resend")
 })
