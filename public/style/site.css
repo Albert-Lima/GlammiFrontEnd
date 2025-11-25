@@ -20,6 +20,9 @@ body{
     background-color: var(--var-ColorBackground);
 }
 
+/*------------------------------------------------------------------------------------------------*/
+/*----------------------------------------HEADER MAIN---------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
 .section-top-main{
     height: 100dvh;
     width: 100%;
@@ -30,7 +33,6 @@ body{
     position: relative;
 }
 .section-top-main header{
-    
     width: 100%;
     height: 80px;
     background-color: var(--var-ColorBackground);
@@ -62,7 +64,13 @@ body{
     font-size: 15pt;
     font-weight: bold;
 }
-
+.nav-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
 .nav-links{
     display: flex;
     flex-direction: row;
@@ -78,8 +86,89 @@ body{
     font-size: 12pt;
     font-weight:500;
 }
-
-
+.nav-cta{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.nav-cta a{
+    text-decoration: none;
+    font-family: var(--var-FontStyledMain);
+    color: var(--var-ColorTextBase);
+}
+.link-auth{
+    background-color: var(--var-ColorDestaque);
+    font-weight: 700 !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.link-login{
+    background-color: transparent;
+    border: 1px solid var(--var-ColorTextBase);
+    font-weight: 700 !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+#btnMenu{
+    display: none;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+/*responsividade*/
+@media (max-width: 1680px) {
+    .section-top-main header{
+        padding-left: 200px;
+        padding-right: 200px;
+    }
+    .nav-links a{
+        font-size: 11pt;
+    }
+}
+@media (max-width: 1145px) {
+    #btnMenu{
+        display: flex;
+    }
+    .nav-links{
+        display: none;
+    }
+}
+@media (max-width: 875px) {
+    .section-top-main header{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+@media (max-width: 630px) {
+    .nav-cta{
+        gap: 10px;
+    }
+    .nav-cta a{
+        font-size: 10pt;
+    }
+}
+@media (max-width: 500px) {
+    .section-top-main header{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .container-logo a{
+        font-size: 12pt;
+    }
+    .link-auth{
+        padding: 10px 15px;
+    }
+    .link-login{
+        padding: 10px 15px;
+    }
+    #btnMenu{
+        width: 30px;
+        height: 30px;
+    }
+}
 /*--------------------------------------------------------------------------------------*/
 /*----------------------PÁGINA DE CADASTRO----------------------------------------------*/
 /*--------------------------------------------------------------------------------------*/
