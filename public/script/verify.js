@@ -8,7 +8,7 @@ const btnVerify = document.querySelector("#btnVerify")
 btnVerify.addEventListener("click", async ()=>{
     const code = document.querySelector("#codeInput").value
 
-    const res = await fetch("http://localhost:8081/auth/verify-email", {
+    const res = await fetch("https://glammis.onrender.com/auth/verify-email", {
         method: "POST",
         headers: { "Content-Type": "application/json"},
         body: JSON.stringify({ email, code})
