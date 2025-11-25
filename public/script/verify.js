@@ -41,7 +41,7 @@ const interval = setInterval(()=>{
 
 //Reenviar código
 resendBtn.addEventListener("click", async ()=>{
-    const res = await fetch("http://localhost:8081/auth/resend-code", {
+    const res = await fetch("https://glammis.onrender.com/auth/resend-code", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({email})
