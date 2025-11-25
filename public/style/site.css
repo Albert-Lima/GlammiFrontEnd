@@ -188,6 +188,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 
 .header-form{
@@ -287,7 +288,23 @@ body{
     color: var(--var-ColorTextBase);
     font-weight: 600;
 }
-
+/*responsividade*/
+@media (max-width: 560px) {
+    .form{
+        width: 90%;
+    }
+    .container-input{
+        width: 100%;
+    }
+    .inputform{
+        width: 100%;
+    }
+}
+@media (max-width: 450px) {
+    .label-form{
+        font-size: 8pt;
+    }
+}
 /*página de verificação do email*/
 .container-verify{
     display: flex;
