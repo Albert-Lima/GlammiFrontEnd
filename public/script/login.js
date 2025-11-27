@@ -47,6 +47,10 @@ btnLogin.addEventListener("click", async () => {
             window.location.href = data.redirect;
         }
 
+        if(data.token){
+            localStorage.setItem("token", data.token);
+        }
+
         if (response.ok) {
             alert("Login realizado com sucesso!");
 
