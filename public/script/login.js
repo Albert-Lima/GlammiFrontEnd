@@ -56,8 +56,6 @@ btnLogin.addEventListener("click", async () => {
 
             // opcional: salvar o usuário no localStorage
             localStorage.setItem("user", JSON.stringify(data.user));
-
-            window.location.href = "/dashboard.html"
         } else {
             alert(data.message || "Erro ao fazer login.");
         }
