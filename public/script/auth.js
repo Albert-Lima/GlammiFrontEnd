@@ -48,7 +48,6 @@ btnRegister.addEventListener("click", async()=>{
         email: sanitize(email),
         password: password
     }
-    console.log(payload)
 
     try {
         const response = await fetch("https://glammis.onrender.com/auth/register", {
