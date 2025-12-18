@@ -428,9 +428,10 @@ body{
     margin-top: 50px;
 }
 .container-direitos p{
-    text-align: center;
+    text-align: start;
     font-family: var(--var-FontStyledMain);
     font-size: 10pt;
     font-weight: 400;
     color: var(--var-ColorBackground);
+    width: 100%;
 }
