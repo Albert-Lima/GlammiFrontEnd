@@ -324,3 +324,20 @@ body{
     font-weight: 400;
     color: var(--var-ColorTextBase);
 }
+
+.mainCTALanding{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.mainCTALanding a{
+    background-color: var(--var-ColorDestaque);
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 30px;
+}
