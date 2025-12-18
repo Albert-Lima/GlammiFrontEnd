@@ -249,9 +249,11 @@ body{
 
 
 .section-bullets{
-    height: 100dvh;
+    height: max-content;
     width: 100%;
     padding-left: 300px;
+    padding-top: 80px;
+    padding-bottom: 80px;
     padding-right: 300px;
     display: flex;
     flex-direction: column;
@@ -297,4 +299,28 @@ body{
     font-weight: 500;
     color: var(--var-ColorTextBase);
     text-align: center;
+}
+.box-bullets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.box-bullets div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.box-bullets div span img{
+    height: 25px;
+    width: auto;
+}
+.box-bullets div p{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--var-ColorTextBase);
 }
