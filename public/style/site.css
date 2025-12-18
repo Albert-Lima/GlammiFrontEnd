@@ -418,3 +418,19 @@ body{
     height: 20px;
     width: auto;
 }
+
+.container-direitos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
+}
+.container-direitos p{
+    text-align: center;
+    font-family: var(--var-FontStyledMain);
+    font-size: 10pt;
+    font-weight: 400;
+    color: var(--var-ColorBackground);
+}
