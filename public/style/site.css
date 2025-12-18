@@ -330,6 +330,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
 }
 .mainCTALanding a{
     background-color: var(--var-ColorDestaque);
@@ -338,6 +339,6 @@ body{
     font-weight: 500;
     color: var(--var-ColorTextBase);
     text-decoration: none;
-    padding: 5px 20px;
+    padding: 8px 25px;
     border-radius: 30px;
 }
