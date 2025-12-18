@@ -362,5 +362,19 @@ body{
     align-items: start;
     justify-content: start;
     width: 100%;
-
+}
+.header-footer a{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 500;
+    color: var(--var-ColorBackground);
+    text-decoration: none;
+}
+.main-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 30px;
 }
