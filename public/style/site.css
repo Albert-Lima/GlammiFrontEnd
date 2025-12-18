@@ -346,3 +346,21 @@ body{
 
 
 /*=================================Footer================================================================================*/
+.footer-site{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--var-ColorTextBase);
+    padding: 50px 300px;
+}
+
+.header-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+
+}
