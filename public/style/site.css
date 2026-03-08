@@ -32,6 +32,7 @@ body{
     align-items: center;
     justify-content: center;
     position: fixed;
+    padding: 15px 0px;
 }
 .container-header{
     display: flex;
@@ -40,8 +41,8 @@ body{
     justify-content: center;
     width: 100%;
     max-width: 1000px;
+    gap: 20px;
 }
-
 .container-logo{
     display: flex;
     flex-direction: row;
@@ -52,20 +53,112 @@ body{
     height: 30px;
     width: 30px;
 }
-
 .navbar{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: calc(100% - 30px);
-    background-color: green;
 }
 .nav-main{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+.navigate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+#btnMenu{
+    display: none;
+    background: none;
+    height: 40px;
+    width: 40px;
+}
+.navigate li{
+    cursor: pointer;
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+.navigate a{
+    text-decoration: none;
+    color: var(--var-ColorTextBase);
+}
+.contain-AUTHBUTTONS{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.contain-AUTHBUTTONS a{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.link-login{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--var-ColorTextBase);
+    border: 1px solid gray;
+}
+.link-auth{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--var-ColorTextBase);
+    background-color: var(--var-ColorDestaque);
+    border: 1px solid var(--var-ColorDestaque);
+}
+
+@media (max-width: 1191px) {
+    .container-header{
+        max-width: 90%;
+    }
+}
+@media (max-width: 680px) {
+    .container-header{
+        max-width: 90%;
+    }
+    .navbar{
+        justify-content: end;
+        flex-direction: row-reverse;
+        gap: 30px;
+    }
+    #btnMenu{
+        display: flex;
+    }
+    .inactive-menu{
+        display: flex;
+    }
+    .active-menu{
+        display: flex;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: green;
+        height: calc(100dvh - 20px);
+        width: calc(100% - 20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .inactive-link-menu{
+        display: none;
+    }
+    .active-link-menu{
+        display: flex;
+    }
 }
 
 /*=================================Footer================================================================================*/
