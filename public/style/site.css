@@ -80,6 +80,10 @@ body{
     height: 40px;
     width: 40px;
 }
+#btnMenu img{
+    height: 40px;
+    width: 40px;
+}
 .navigate li{
     cursor: pointer;
     font-family: var(--var-FontStyledMain);
@@ -146,12 +150,18 @@ body{
         position: fixed;
         top: 10px;
         right: 10px;
-        background-color: green;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.048);
         height: calc(100dvh - 20px);
         width: calc(100% - 20px);
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .navigate{
+        flex-direction: column;
     }
     .inactive-link-menu{
         display: none;
