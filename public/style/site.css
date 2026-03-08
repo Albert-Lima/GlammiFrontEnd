@@ -170,7 +170,17 @@ body{
         display: flex;
     }
 }
-
+@media (max-width: 410px) {
+    .contain-AUTHBUTTONS a{
+        padding: 8px 15px;
+    }
+    .link-login{
+        font-size: 10pt;
+    }
+    .link-auth{
+        font-size: 10pt;
+    }
+}
 /*=================================Footer================================================================================*/
 .footer-site{
     display: flex;
