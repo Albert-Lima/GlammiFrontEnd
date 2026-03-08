@@ -399,6 +399,9 @@ body{
         text-align: center;
         font-size: 10pt;
     }
+    .leftTop p:nth-child(5) img{
+        display: none;
+    }
 }
 /*=================================Footer================================================================================*/
 .footer-site{
