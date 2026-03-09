@@ -468,7 +468,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 80px;
+    gap: 60px;
     width: 90%;
     max-width: 1400px;
 }
@@ -604,6 +604,23 @@ body{
     .contain-text-function p{
         text-align: center;
     }
+}
+
+@media (max-width: 430px) {
+    .container-section-terceira h2{
+        font-size: 15pt;
+    }
+    .contain-text-function h3{
+        width: 90%;
+    }
+    .contain-text-function p{
+        width: 90%;
+    }
+    .contain-img-function img{
+        height: 200px;
+        width: auto;
+    }
+
 }
 
 
