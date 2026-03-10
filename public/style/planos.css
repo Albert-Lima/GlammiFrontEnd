@@ -251,6 +251,7 @@ body{
     cursor: pointer;
     background-color: #D9D9D9;
     position: relative;
+    z-index: 1;
 }
 
 .deslizante{
