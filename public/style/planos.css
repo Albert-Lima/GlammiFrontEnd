@@ -338,16 +338,102 @@ body{
     font-size: 12pt;
     font-weight: 500;
     color: var(--var-ColorTextBase);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.containValue{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    width: 100%;
+    border-bottom: 1px solid #BCBCBC;
 }
 .valueCard{
     font-family: var(--var-FontStyledMain);
     font-weight: 600;
     color: var(--var-ColorTextBase);
     font-size: 15pt;
-    border-bottom: 2px solid #BCBCBC;
-    width: 100%;
 }
 
+.CTA-Card{
+    height: 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #FFC626;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3px;
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.048);
+}
+.box-functions{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-top: 20px;
+    gap: 20px;
+}
+.box-functions p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 5px;
+    font-family: var(--var-FontStyledMain);
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--var-ColorTextBase);
+}
+.box-functions p:nth-child(6){
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+    font-family: var(--var-FontStyledMain);
+    font-size: 11pt;
+    font-weight: 400;
+    color: var(--var-ColorTextBase);
+}
+.box-functions p img{
+    height: 15px;
+}
+
+.plano-pro{
+    border: 2px solid var(--var-ColorDestaque);
+}
+.card-plano h2 img{
+    transform: translateY(-2px);
+    height: 20px;
+}
+.card-plano h2 span{
+    padding: 5px 10px;
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #ffc52621;
+    color: #daa40f;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.048);
+}
+#descMensalAnual{
+    font-family: var(--var-FontStyledMain);
+    font-size: 15px;
+    font-weight: 400;
+    color: #808080;
+}
 /*=================================Footer================================================================================*/
 .footer-site{
     display: flex;

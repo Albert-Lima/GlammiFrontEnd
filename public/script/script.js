@@ -52,11 +52,11 @@ btnPeriodPlanos.addEventListener("click", ()=>{
 
     if(deslizante.classList.contains("anual-deslizante")){
 
-        descMensalAnual.innerText = ""
-        descMensalAnual.innerText = "/ Mês"
-
         valuePro.innerText = ""
         valuePro.innerText = "R$ 24,90"
+
+        descMensalAnual.innerText = ""
+        descMensalAnual.innerText = "/Mês"
 
         deslizante.classList.remove("anual-deslizante")
         deslizante.classList.add("mensal-deslizante")
@@ -70,7 +70,7 @@ btnPeriodPlanos.addEventListener("click", ()=>{
         valuePro.innerText = "R$ 239,90"
 
         descMensalAnual.innerText = ""
-        descMensalAnual.innerText = "/ Ano"
+        descMensalAnual.innerText = "/Ano"
 
         deslizante.classList.add("anual-deslizante")
         deslizante.classList.remove("mensal-deslizante")
