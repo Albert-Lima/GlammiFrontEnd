@@ -253,7 +253,7 @@ body{
 
 .deslizante{
     width: 50%;
-    height: 100%;
+    height: calc(100% - 6px);
     background-color: #64A0FF;
     border-radius: 30px;
     position: absolute;
@@ -269,12 +269,42 @@ body{
     right: auto;
 }
 
+
 .contain-text-deslizante{
-    width: 100%;
+    width: calc(100% - 30px);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    position: absolute;
+    z-index: 2;
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.041);
+}
+
+.textMensal-active{
+    color: white;
+}
+
+
+.textAnual{
+    transform: translateX(-5px);
+}
+.textAnual-active{
+    color: white;
+}
+
+
+@media (max-width: 535px) {
+    .container-top h1{
+        font-size: 15pt;
+    }
+    .box-select-period{
+        flex-direction: column-reverse;
+        gap: 5px;
+    }
 }
 
 /*=================================Footer================================================================================*/

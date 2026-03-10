@@ -1,3 +1,4 @@
+//==================HEADER=====================================
 const navMain = document.querySelector(".nav-main")
 const btnMenu = document.querySelector("#btnMenu")
 const imgButtonMenu = document.querySelector(".imgButtonMenu")
@@ -35,4 +36,34 @@ btnMenu.addEventListener("click", ()=>{
 
     }
     
+})
+
+
+
+//======================PLANOS===================================
+const btnPeriodPlanos = document.querySelector(".btn-select-period")
+const deslizante = document.querySelector(".deslizante")
+const textMensal = document.querySelector(".textMensal")
+const textAnual = document.querySelector(".textAnual")
+
+btnPeriodPlanos.addEventListener("click", ()=>{
+
+    if(deslizante.classList.contains("anual-deslizante")){
+
+        deslizante.classList.remove("anual-deslizante")
+        deslizante.classList.add("mensal-deslizante")
+
+        textAnual.classList.remove("textAnual-active")
+        textMensal.classList.add("textMensal-active")
+        
+
+    } else {
+
+        deslizante.classList.add("anual-deslizante")
+        deslizante.classList.remove("mensal-deslizante")
+
+        textAnual.classList.add("textAnual-active")
+        textMensal.classList.remove("textMensal-active")
+        
+    }
 })
