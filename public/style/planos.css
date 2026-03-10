@@ -186,6 +186,96 @@ body{
 }
 
 
+/*=================================TOPO PLANOS===========================================================================*/
+.top-planos{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    padding-top: 90px;
+}
+.container-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1400px;
+    gap: 30px;
+}
+.container-top h1{
+    font-family: var(--var-FontStyledMain);
+    font-size: 20pt;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+    text-align: center;
+    max-width: 700px;
+}
+.sub-headline-planos{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 400;
+    color: var(--var-ColorTextBase);
+    text-align: center;
+    max-width: 700px;
+}
+
+.box-select-period{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.desc-select-period{
+    font-family: var(--var-FontStyledMain);
+    font-size: 11pt;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+
+.btn-select-period{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 30px;
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    background-color: #D9D9D9;
+    position: relative;
+}
+
+.deslizante{
+    width: 50%;
+    height: 100%;
+    background-color: #64A0FF;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 1;
+}
+.anual-deslizante{
+    left: auto;
+    right: 3px;
+}
+
+.mensal-deslizante{
+    left: 3px;
+    right: auto;
+}
+
+.contain-text-deslizante{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
 
 /*=================================Footer================================================================================*/
 .footer-site{
