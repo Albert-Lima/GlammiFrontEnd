@@ -300,6 +300,9 @@ body{
 
 
 @media (max-width: 535px) {
+    .top-planos{
+        padding-top: 50px;
+    }
     .container-top h1{
         font-size: 15pt;
     }
