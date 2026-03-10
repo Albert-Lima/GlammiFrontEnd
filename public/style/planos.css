@@ -435,6 +435,15 @@ body{
     font-weight: 400;
     color: #808080;
 }
+@media (max-width: 700px) {
+    .contain-planos{
+        flex-direction: column;
+    }
+}
+
+
+
+
 /*=================================Footer================================================================================*/
 .footer-site{
     display: flex;
