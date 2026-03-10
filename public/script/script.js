@@ -45,10 +45,14 @@ const btnPeriodPlanos = document.querySelector(".btn-select-period")
 const deslizante = document.querySelector(".deslizante")
 const textMensal = document.querySelector(".textMensal")
 const textAnual = document.querySelector(".textAnual")
+const descMensalAnual = document.querySelector("#descMensalAnual")
 
 btnPeriodPlanos.addEventListener("click", ()=>{
 
     if(deslizante.classList.contains("anual-deslizante")){
+
+        descMensalAnual.innerText = ""
+        descMensalAnual.innerText = "/ Mês"
 
         deslizante.classList.remove("anual-deslizante")
         deslizante.classList.add("mensal-deslizante")
@@ -59,11 +63,14 @@ btnPeriodPlanos.addEventListener("click", ()=>{
 
     } else {
 
+        descMensalAnual.innerText = ""
+        descMensalAnual.innerText = "/ Ano"
+
         deslizante.classList.add("anual-deslizante")
         deslizante.classList.remove("mensal-deslizante")
 
         textAnual.classList.add("textAnual-active")
         textMensal.classList.remove("textMensal-active")
-        
+
     }
 })
