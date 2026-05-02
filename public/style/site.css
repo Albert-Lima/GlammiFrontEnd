@@ -20,33 +20,54 @@ body{
     background-color: white;
 }
 
+/******ANIMAÇÕES******************************************/
+@keyframes arrowSelectMove {
+    0%{
+       transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-3px);
+    }
+    100%{
+        transform: translateX(5px);
+    }
+}
+
 /*------------------------------------------------------------------------------------------------*/
 /*----------------------------------------HEADER MAIN---------------------------------------------*/
 /*------------------------------------------------------------------------------------------------*/
 .header-page{
-    width: 100%;
+    width: 90%;
     background-color: white;
-    box-shadow: 20px 0px 10px 2px rgba(0, 0, 0, 0.084);
+    box-shadow: 0px 4px 40px 10px #0009721a;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 20px;
+    right: 5%;
     padding: 15px 0px;
     z-index: 2;
+    border-radius: 20px;
 }
 .container-header{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
     gap: 20px;
+    padding: 0px 20px;
 }
 .container-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    order: 0;
+}
+.container-logo a{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -61,7 +82,7 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 30px);
+    width: max-content;
 }
 .nav-main{
     display: flex;
@@ -84,8 +105,8 @@ body{
     width: 40px;
 }
 #btnMenu img{
-    height: 40px;
-    width: 40px;
+    height: 100%;
+    width: 100%;
 }
 .navigate li{
     cursor: pointer;
@@ -116,7 +137,7 @@ body{
     font-weight: 600;
     text-decoration: none;
     color: var(--var-ColorTextBase);
-    border: 1px solid gray;
+    border: 1px solid rgb(201, 201, 201);
 }
 .link-auth{
     font-family: var(--var-FontStyledMain);
@@ -126,21 +147,55 @@ body{
     color: var(--var-ColorTextBase);
     background-color: var(--var-ColorDestaque);
     border: 1px solid var(--var-ColorDestaque);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.link-auth:hover img{
+    animation-name: arrowSelectMove;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.link-auth img{
+    height: 15px;
+    width: 15px;
+}
+@media (max-width: 1080px){
+    .container-logo a{
+        font-size: 13px;
+    }
+    .container-logo img{
+        height: 25px;
+        width: 25px;
+    }
+    .navigate li{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .contain-AUTHBUTTONS a{
+        padding: 5px 15px;
+    }
+    .link-login{
+        font-size: 12px;
+    }
+    .link-auth{
+        font-size: 12px;
+    }
+    .link-auth img{
+        height: 13px;
+        width: 13px;
+    }
 }
 
-@media (max-width: 1191px) {
-    .container-header{
-        max-width: 90%;
-    }
-}
-@media (max-width: 680px) {
-    .container-header{
-        max-width: 90%;
-    }
+@media (max-width: 800px) {
     .navbar{
         justify-content: end;
         flex-direction: row-reverse;
         gap: 30px;
+        order: 3;
     }
     #btnMenu{
         display: flex;
@@ -172,16 +227,20 @@ body{
     .active-link-menu{
         display: flex;
     }
+    .contain-AUTHBUTTONS{
+        order: 2;
+    }
 }
 @media (max-width: 410px) {
     .contain-AUTHBUTTONS a{
-        padding: 8px 15px;
+        padding: 8px 10px;
     }
-    .link-login{
-        font-size: 10pt;
+    .link-auth img{
+        display: none;
     }
-    .link-auth{
-        font-size: 10pt;
+    #btnMenu{
+        height: 30px;
+        width: 30px;
     }
 }
 /*SECTION TOP____________________________________________________________________________________________________________*/
@@ -195,17 +254,6 @@ body{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-.imgBackground{
-    width: 60%;
-    height: 100%;
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    background-image: url("/public/img/pexels-pavel-danilyuk-7518739.jpg");
-    object-fit: cover;
-    border-bottom-right-radius: 80%;
-    opacity: 0.1;
 }
 .container-top{
     display: flex;
