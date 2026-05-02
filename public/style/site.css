@@ -257,8 +257,7 @@ body{
 /*SECTION TOP____________________________________________________________________________________________________________*/
 .section-top-main{
     width: 100%;
-    height: calc(100dvh - 75px);
-    margin-top: 75px;
+    height: 100dvh;
     position: relative;
     z-index: 1;
     display: flex;
@@ -281,8 +280,8 @@ body{
     flex-direction: column;
     align-items: start;
     justify-content: center;
-    gap: 10px;
-    width: 50%;
+    gap: 20px;
+    width: 60%;
     height: 100%;
     position: absolute;
     z-index: 3;
@@ -310,19 +309,14 @@ body{
 }
 .leftTop h1:nth-child(2){
     font-family: var(--var-FontStyledMain);
-    font-size: 30pt;
+    font-size: 25pt;
+    font-weight: 900;
     color: var(--var-ColorTextBase);
     max-width: 90%;
 }
-.leftTop h1:nth-child(3){
-    font-family: var(--var-FontStyledMain);
-    font-size: 40pt;
-    color: #FFC626;
-    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.11);
-}
 .subHeadline{
     font-family: var(--var-FontStyledMain);
-    font-size: 12pt;
+    font-size: 12px;
     font-weight: 500;
     color: var(--var-ColorTextBase);
     max-width: 80%;
@@ -333,56 +327,74 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin-top: 30px;
 }
 .containCTA-TOP a:nth-child(1){
     text-decoration: none;
     font-family: var(--var-FontStyledMain);
     font-size: 12px;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.041);
-    font-weight: 500;
-    color: white;
-    background-color: #64A0FF;
-    width: 148px;
+    font-weight: 600;
+    color: var(--var-ColorTextBase);
+    background-color: #FEB820;
+    width: 200px;
     border-radius: 12px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 10px;
     height: 50px;
 }
-.containCTA-TOP a:nth-child(2){
-    text-decoration: none;
-    font-family: var(--var-FontStyledMain);
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--var-ColorTextBase);
-    background-color: white;
-    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.048);
-    width: 148px;
-    height: 50px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.containCTA-TOP a:nth-child(1) img{
+    height: 16px;
+    width: 17px;
+}
+.containCTA-TOP a:nth-child(1):hover img{
+    animation-name: arrowSelectMove;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
-.leftTop p:nth-child(5){
-    font-family: var(--var-FontStyledMain);
-    font-size: 11pt;
-    font-weight: 400;
-    color: var(--var-ColorTextBase);
+.iconInfoExtra{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.infoExtra{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 10px;
 }
-.leftTop p:nth-child(5) img{
-    height: 20px;
-    width: 20px;
-    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.096));
+.infoExtra span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    position: relative;
+}
+.infoExtra span img:nth-child(1){
+    height: 18px;
+    width: 18px;
+}
+.infoExtra span img:nth-child(2){
+    height: 12px;
+    width: 12px;
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+}
+.infoExtra p{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: gray;
 }
 
 
@@ -392,7 +404,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
-    width: 50%;
+    width: 40%;
     height: 100%;
     position: absolute;
     right: 0px;
@@ -407,7 +419,7 @@ body{
     transform: translateY(-50px);
 }
 #dashboardDesktop{
-    width: 80%;
+    width: 95%;
     position: absolute;
     right: 50px;
 }
@@ -454,10 +466,6 @@ body{
     }
 }
 @media (max-width: 645px) {
-    .leftTop h1:nth-child(1){
-        text-align: center;
-        font-size: 25pt;
-    }
     .leftTop h1:nth-child(2){
         text-align: center;
         font-size: 20pt;
@@ -472,6 +480,13 @@ body{
     }
     .leftTop p:nth-child(5) img{
         display: none;
+    }
+    .infoExtra{
+        flex-direction: column;
+    }
+    .infoExtra p{
+        text-align: center;
+        font-size: 10px;
     }
 }
 
