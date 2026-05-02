@@ -113,11 +113,11 @@ body{
     font-family: var(--var-FontStyledMain);
     font-size: 12pt;
     font-weight: 500;
-    color: var(--var-ColorTextBase);
+    color: rgb(58, 57, 57);
 }
 .navigate a{
     text-decoration: none;
-    color: var(--var-ColorTextBase);
+    color: rgb(58, 57, 57);
 }
 .contain-AUTHBUTTONS{
     display: flex;
