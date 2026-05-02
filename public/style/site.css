@@ -20,6 +20,11 @@ body{
     background-color: white;
 }
 
+/******ESTILZAÇÃO UNIVERSAL***************************************************/
+.highlightTITLE{
+    color: #FEB820;
+}
+
 /******ANIMAÇÕES******************************************/
 @keyframes arrowSelectMove {
     0%{
