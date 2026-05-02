@@ -66,6 +66,7 @@ body{
     align-items: center;
     justify-content: center;
     order: 0;
+    gap: 10px;
 }
 .container-logo a{
     display: flex;
@@ -76,6 +77,11 @@ body{
 .container-logo img{
     height: 30px;
     width: 30px;
+}
+.container-logo p{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 600;
+    font-size: 12px;
 }
 .navbar{
     display: flex;
@@ -229,6 +235,11 @@ body{
     }
     .contain-AUTHBUTTONS{
         order: 2;
+    }
+}
+@media (max-width: 580px) {
+    .container-logo p{
+        display: none;
     }
 }
 @media (max-width: 410px) {
