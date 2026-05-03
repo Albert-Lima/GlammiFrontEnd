@@ -416,12 +416,40 @@ body{
     z-index: 2;
 }
 
-#dashboardMobile{
-    height: 300px;
+.firstBallonTop{
+    height: 40%;
+    width: 70%;
+    background-image: linear-gradient( to right, #437ae748, #bbd0fb46);
+    border-radius: 100%;
     position: absolute;
-    left: 80px;
+    transform: translateX(-30px);
+    top: 20%;
+
+}
+.secondBallonTop{
+    height: 40%;
+    width: 40%;
+    background-image: linear-gradient( to right, #437ae748, #bbd0fb46);
+    border-radius: 100%;
+    transform: rotateZ(40deg);
+    position: absolute;
+    right: 20px;
+}
+.thirdBallonTop{
+    height: 30%;
+    width: 80%;
+    background-image: linear-gradient( to right, #fcb72138, #feb8201f);
+    border-radius: 100%;
+    position: absolute;
+    left: -50px;
+}
+
+#dashboardMobile{
+    width: 25%;
+    height: auto;
+    position: absolute;
+    right: 20px;
     z-index: 2;
-    transform: translateY(-50px);
 }
 #dashboardDesktop{
     width: 95%;
@@ -432,15 +460,6 @@ body{
 @media (max-width: 1320px) {
     #dashboardDesktop{
         position: absolute;
-    }
-}
-@media (max-width: 1100px) {
-    #dashboardMobile{
-        height: 180px;
-        position: absolute;
-        left: 80px;
-        z-index: 2;
-        transform: translateY(-20px);
     }
 }
 @media (max-width: 940px) {
@@ -469,6 +488,16 @@ body{
     .subHeadline{
         text-align: center;
     }
+    .firstBallonTop{
+        display: none;
+
+    }
+    .secondBallonTop{
+        display: none;
+    }
+    .thirdBallonTop{
+        display: none;
+    }
 }
 @media (max-width: 645px) {
     .leftTop h1:nth-child(2){
@@ -494,6 +523,23 @@ body{
         font-size: 10px;
     }
 }
+@media (max-width: 570px) {
+    .leftTop h1:nth-child(2){
+        font-size: 15pt;
+    }
+    .subHeadline{
+        font-size: 12px;
+    }
+    .containCTA-TOP a:nth-child(1){
+        height: 40px;
+    }
+}
+@media (max-height: 630px) {
+    .section-top-main{
+        height: calc(100dvh - 75px);
+        margin-top: 75px;
+    }
+}
 
 /*=================================SECOND SECTION========================================================================*/
 .section-second{
@@ -502,7 +548,9 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 70dvh;
+    height: max-content;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 .container-section-second{
     width: 90%;
@@ -516,7 +564,7 @@ body{
 .container-section-second h2{
     font-family: var(--var-FontStyledMain);
     font-size: 20pt;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--var-ColorTextBase);
     text-align: center;
 }
