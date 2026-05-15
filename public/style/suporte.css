@@ -264,8 +264,8 @@ body{
 .TelaArtigoSuporte{
     margin-top: 120px;
     padding: 2vw;
-    background-color: green;
     width: 100%;
+    height: calc(100vh - 120px);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -273,6 +273,159 @@ body{
     gap: 0px;
 }
 
+
+/*menu lateral do suporte*/
+.sidebar-support{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    height: 100%;
+    width: 280px;
+    border-right: 1px solid rgba(128, 128, 128, 0.205);
+    padding-right: 10px;
+    overflow-y: auto;
+    gap: 50px
+}
+.header-asideBar{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+    padding-left: 10px;
+}
+.header-asideBar h2{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 600;
+    color: var(--var-ColorTextBase);
+    font-size: 15px;
+}
+.header-asideBar p{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+    font-size: 12px;
+}
+.menu-support{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+}
+.menu-support h2{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--var-ColorTextBase);
+    padding-left: 10px;
+}
+.contain-nav-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+}
+.itenMenuSupport{
+    height: 40px;
+    width: 100%;
+    background-color: transparent;
+    border-left: 3px solid transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    padding: 5px 10px;
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+    cursor: pointer;
+    border-radius: 5px;
+}
+.activedItemMenu{
+    border-left: 3px solid var(--var-ColorDestaque);
+    background-color: #ffc52628;
+}
+
+
+/*tela de artigos*/
+.containerArtigos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    overflow-y: auto;
+    width: calc(100% - 300px);
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.articleSupport{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
 .hidden{
     display: none;
+}
+.header-artigo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+}
+.header-artigo h1{
+    font-family: var(--var-FontStyledMain);
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--var-ColorTextBase);
+}
+.header-artigo h2{
+    font-family: var(--var-FontStyledMain);
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+
+.partArtigo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.partArtigo h3{
+    font-family: var(--var-FontStyledMain);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--var-ColorTextBase);
+}
+.container-paragrafo-artigo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    margin-top: 20px;
+}
+.container-paragrafo-artigo p{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+.container-paragrafo-artigo p img{
+    max-width: 80%;
+    max-height: 250px;
 }

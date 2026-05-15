@@ -9,6 +9,14 @@ buttons.forEach(button => {
 
         history.pushState({}, "", url)
 
+        // REMOVE ACTIVE DOS OUTROS
+        buttons.forEach(btn => {
+            btn.classList.remove("activedItemMenu")
+        })
+
+        // ADICIONA ACTIVE NO BOTÃO CLICADO
+        button.classList.add("activedItemMenu")
+
         articles.forEach(article => {
             article.classList.add("hidden")
         })
