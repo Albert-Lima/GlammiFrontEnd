@@ -1,13 +1,11 @@
-const buttons = document.querySelectorAll("[data-url]")
+const buttons = document.querySelectorAll("[data-target]")
 const articles = document.querySelectorAll(".articleSupport")
 
 buttons.forEach(button => {
 
     button.addEventListener("click", ()=>{
 
-        const url = button.dataset.url
-
-        history.pushState({}, "", url)
+    
 
         // REMOVE ACTIVE DOS OUTROS
         buttons.forEach(btn => {
@@ -21,7 +19,7 @@ buttons.forEach(button => {
             article.classList.add("hidden")
         })
 
-        const id = url.split("/").pop()
+        const id = button.dataset.target
 
         document
             .getElementById(id)

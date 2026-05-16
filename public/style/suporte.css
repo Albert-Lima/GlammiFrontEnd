@@ -463,9 +463,8 @@ body{
 @media (max-width: 800px) {
     .containerArtigos{
         width: 100%;
-        height: calc(100% - 70px);
+        height: 100%;
         padding: 0px;
-        margin-top: 40px;
     }
 }
 
@@ -479,12 +478,18 @@ body{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: green;
-        height: 30px;
-        width: 30px;
+        border: 1px solid rgba(128, 128, 128, 0.308);
+        background-color: white;
+        border-radius: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 35px;
         cursor: pointer;
         position: absolute;
         top: 120px;
         left: 2vw;
+        font-family: var(--var-FontStyledMain);
+        font-size: 12px;
+        font-weight: 500;
     }
 }
