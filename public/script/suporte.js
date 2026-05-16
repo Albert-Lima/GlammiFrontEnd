@@ -30,3 +30,20 @@ buttons.forEach(button => {
     })
 
 })
+
+//menu lateral responsivo
+const btnMenuSideBar = document.querySelector(".btnMenuSideBar")
+const menuSideBar = document.querySelector(".sidebar-support")
+
+btnMenuSideBar.addEventListener("click", ()=>{
+    if(menuSideBar.classList.contains("activedSideBar")){
+        menuSideBar.classList.remove("activedSideBar")
+        menuSideBar.classList.add("inactivedSideBar")
+        menuSideBar.style.transition = "0.3s"
+    } else if (menuSideBar.classList.contains("inactivedSideBar")){
+        menuSideBar.classList.remove("inactivedSideBar")
+        menuSideBar.classList.add("activedSideBar")
+        menuSideBar.style.transition = "0.3s"
+    }
+
+})
