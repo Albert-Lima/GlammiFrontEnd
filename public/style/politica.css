@@ -241,3 +241,104 @@ body{
         width: 30px;
     }
 }
+
+/*CONTAINER POLITICA*/
+.containerMainPolitica{
+    margin-top: 120px;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-bottom: 80px;
+}
+.containerMainPolitica main{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 100%;
+}
+.headerPolitica{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.headerPolitica h1{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--var-ColorTextBase);
+}
+.headerPolitica p{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--var-ColorTextBase);
+}
+.perText{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 80%;
+    gap: 5px;
+}
+.perText p{
+    text-align: start;
+    width: 100%;
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+
+.paragrafoPolitica{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+.paragrafoPolitica h2{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--var-ColorTextBase);
+}
+.descParagrafo{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+.topicoParagrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+}
+.topicoParagrafo h3{
+    font-family: var(--var-FontStyledMain);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--var-ColorTextBase);
+}
+.topicoParagrafo p{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+.topicoParagrafo p a{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--var-ColorTextBase);
+}
+
+.contatoLGPD{
+    font-family: var(--var-FontStyledMain);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--var-ColorTextBase);
+}
