@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --var-FontStyledMain: "Poppins", sans-serif;
+
+    --var-ColorBackground: #F9F6EF;
+    --var-ColorDestaque: #FFC626;
+    --var-ColorTextBase: #161616;
+    --var-ColorNeutro: #8C8C8C;
+}
+
+*{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+/*----------------------------------------HEADER MAIN---------------------------------------------*/
+/*------------------------------------------------------------------------------------------------*/
+.header-page{
+    width: 90%;
+    background-color: white;
+    box-shadow: 0px 4px 40px 10px #0009721a;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 5%;
+    padding: 15px 0px;
+    z-index: 2;
+    border-radius: 20px;
+}
+.container-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+    padding: 0px 20px;
+}
+.container-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    order: 0;
+    gap: 10px;
+}
+.container-logo a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.container-logo img{
+    height: 30px;
+    width: 30px;
+}
+.container-logo p{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 600;
+    font-size: 12px;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: max-content;
+}
+.nav-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navigate{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+#btnMenu{
+    display: none;
+    background: none;
+    height: 40px;
+    width: 40px;
+}
+#btnMenu img{
+    height: 100%;
+    width: 100%;
+}
+.navigate li{
+    cursor: pointer;
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 500;
+    color: rgb(58, 57, 57);
+}
+.navigate a{
+    text-decoration: none;
+    color: rgb(58, 57, 57);
+}
+.contain-AUTHBUTTONS{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.contain-AUTHBUTTONS a{
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.link-login{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--var-ColorTextBase);
+    border: 1px solid rgb(201, 201, 201);
+}
+.link-auth{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12pt;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--var-ColorTextBase);
+    background-color: var(--var-ColorDestaque);
+    border: 1px solid var(--var-ColorDestaque);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.link-auth:hover img{
+    animation-name: arrowSelectMove;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+.link-auth img{
+    height: 15px;
+    width: 15px;
+}
+@media (max-width: 1080px){
+    .container-logo a{
+        font-size: 13px;
+    }
+    .container-logo img{
+        height: 25px;
+        width: 25px;
+    }
+    .navigate li{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .contain-AUTHBUTTONS a{
+        padding: 5px 15px;
+    }
+    .link-login{
+        font-size: 12px;
+    }
+    .link-auth{
+        font-size: 12px;
+    }
+    .link-auth img{
+        height: 13px;
+        width: 13px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navbar{
+        justify-content: end;
+        flex-direction: row-reverse;
+        gap: 30px;
+        order: 3;
+    }
+    #btnMenu{
+        display: flex;
+    }
+    .inactive-menu{
+        display: flex;
+    }
+    .active-menu{
+        display: flex;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.048);
+        height: calc(100dvh - 20px);
+        width: calc(100% - 20px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navigate{
+        flex-direction: column;
+    }
+    .inactive-link-menu{
+        display: none;
+    }
+    .active-link-menu{
+        display: flex;
+    }
+    .contain-AUTHBUTTONS{
+        order: 2;
+    }
+}
+@media (max-width: 580px) {
+    .container-logo p{
+        display: none;
+    }
+}
+@media (max-width: 410px) {
+    .contain-AUTHBUTTONS a{
+        padding: 8px 10px;
+    }
+    .link-auth img{
+        display: none;
+    }
+    #btnMenu{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+/*CONTAINER POLITICA*/
+.containerMainTermos{
+    margin-top: 120px;
+    padding-bottom: 80px;
+    width: 90%;
+    margin-left: 5%;
+}
+.containerMainTermos main{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 90%;
+}
+.headerTermos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+.headerTermos h1{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--var-ColorTextBase);
+}
+.headerTermos p{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--var-ColorTextBase);
+}
+.perText{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    width: 80%;
+    gap: 5px;
+}
+.perText p{
+    text-align: start;
+    width: 100%;
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+
+.paragrafoTermos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 10px;
+}
+.paragrafoTermos h2{
+    font-family: var(--var-FontStyledMain);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--var-ColorTextBase);
+}
+.descParagrafo{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+.topicoParagrafo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 5px;
+}
+.topicoParagrafo h3{
+    font-family: var(--var-FontStyledMain);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--var-ColorTextBase);
+}
+.topicoParagrafo p{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--var-ColorTextBase);
+}
+.topicoParagrafo p a{
+    font-family: var(--var-FontStyledMain);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--var-ColorTextBase);
+}
+
+.contatoLGPD{
+    font-family: var(--var-FontStyledMain);
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--var-ColorTextBase);
+}
